@@ -1,4 +1,4 @@
-⚠️ Note: This repository is not maintained. For more recent guides about how to build GitHub Apps, see "[About writing code for a GitHub App](https://docs.github.com/en/apps/creating-github-apps/writing-code-for-a-github-app/about-writing-code-for-a-github-app)."
+"[About writing code for a GitHub App](https://docs.github.com/en/apps/creating-github-apps/writing-code-for-a-github-app/about-writing-code-for-a-github-app)."
 
 This is an example GitHub App that adds a label to all new issues opened in a repository. You can follow the archived "[Using the GitHub API in your app](https://web.archive.org/web/20230604175646/https://docs.github.com/en/apps/creating-github-apps/writing-code-for-a-github-app/using-the-github-api-in-your-app)" guide to learn how to build the app code in `server.rb`.
 
