@@ -1,42 +1,23 @@
-# Clients App #
+⚠️ Note: This repository is not maintained. For more recent guides about how to build GitHub Apps, see "[About writing code for a GitHub App](https://docs.github.com/en/apps/creating-github-apps/writing-code-for-a-github-app/about-writing-code-for-a-github-app)."
 
-## Available Scripts
+This is an example GitHub App that adds a label to all new issues opened in a repository. You can follow the archived "[Using the GitHub API in your app](https://web.archive.org/web/20230604175646/https://docs.github.com/en/apps/creating-github-apps/writing-code-for-a-github-app/using-the-github-api-in-your-app)" guide to learn how to build the app code in `server.rb`.
 
-In the project directory, you can run:
+This project listens for webhook events and uses the Octokit.rb library to make REST API calls. This example project consists of two different servers:
+* `template_server.rb` (GitHub App template code)
+* `server.rb` (completed project)
 
-### `npm install`
+To learn how to set up a template GitHub App, follow the archived "[Setting up your development environment](https://web.archive.org/web/20230604175646/https://docs.github.com/en/apps/creating-github-apps/writing-code-for-a-github-app/setting-up-your-development-environment-to-create-a-github-app)" guide.
 
-This script will be add local dependencies to your project/repo.
+## Install
 
-### `npm start`
+To run the code, make sure you have [Bundler](https://bundler.io/) installed; then enter `bundle install` on the command line.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Set environment variables
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1. Create a copy of the `.env-example` file called `.env`.
+2. Add your GitHub App's private key, app ID, and webhook secret to the `.env` file.
 
-### `npm test`
+## Run the server
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Run `ruby template_server.rb` or `ruby server.rb` on the command line.
+1. View the default Sinatra app at `localhost:3000`.
